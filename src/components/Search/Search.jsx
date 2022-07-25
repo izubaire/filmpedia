@@ -11,6 +11,9 @@ const Search = () => {
   const [query, setQuery] = useState('');  
   const classes = useStyles();  
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  if (location.pathname !== '/') return null;
 
   const handleKeyPress = (event) => {
     if(event.key === 'Enter') {
